@@ -36,3 +36,19 @@ fn loop(l, queue, count) {
       }
   }
 }
+
+pub fn solve_another(order_list) {
+  let #(queue, count) =
+    list.fold(order_list, #([], 0), fn(acc, order) {
+      let #(queue, count) = acc
+      case order {
+        [1, x] -> #([x, ..queue], count)
+        [2] -> #(queue, count + 1)
+        _ -> acc
+      }
+    })
+
+  queue
+  |> list.reverse
+  |> list.take(count)
+}
