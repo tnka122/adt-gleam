@@ -1,11 +1,12 @@
-import gleam/erlang
 import gleam/int
 import gleam/list
 import gleam/string
 
+@external(erlang, "io", "get_line")
+fn ffi_read_line(prompt: String) -> String
+
 pub fn read_line() -> String {
-  let assert Ok(line) = erlang.get_line("")
-  string.trim(line)
+  ffi_read_line("") |> string.trim
 }
 
 pub fn read_int() -> Int {
