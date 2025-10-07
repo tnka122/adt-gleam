@@ -1,3 +1,5 @@
+# version ref: https://atcoder.jp/contests/adt_all_20251007_1/rules
+
 [tools]
-erlang = "latest"
-gleam = "latest"
+erlang = "28.0.2"
+gleam = "1.12.0"
