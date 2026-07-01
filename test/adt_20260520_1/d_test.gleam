@@ -13,7 +13,7 @@ fn make_grid(lines) {
   |> iv.from_list
 }
 
-pub fn d_test_1() {
+pub fn d_1_test() {
   let grid =
     make_grid([
       ".######",
@@ -28,12 +28,12 @@ pub fn d_test_1() {
   assert d.solve(#(8, 7, grid)) == True
 }
 
-pub fn d_test_2() {
+pub fn d_2_test() {
   let grid = make_grid(["##"])
   assert d.solve(#(1, 2, grid)) == False
 }
 
-pub fn d_test_3() {
+pub fn d_3_test() {
   let grid =
     make_grid([
       "...",
@@ -44,7 +44,7 @@ pub fn d_test_3() {
   assert d.solve(#(4, 3, grid)) == True
 }
 
-pub fn d_test_4() {
+pub fn d_4_test() {
   let grid =
     make_grid([
       "##.###..##.##..##.",

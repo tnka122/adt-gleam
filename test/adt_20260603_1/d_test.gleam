@@ -6,7 +6,7 @@ fn make_input(lines) {
   lines |> list.map(string.to_graphemes)
 }
 
-pub fn d_test_1() {
+pub fn d_1_test() {
   let input =
     make_input([
       "-xx",
@@ -16,7 +16,7 @@ pub fn d_test_1() {
   assert d.solve(input) == [3, 2, 1]
 }
 
-pub fn d_test_2() {
+pub fn d_2_test() {
   let input =
     make_input([
       "-oxoxox",
