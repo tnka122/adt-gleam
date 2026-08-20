@@ -17,7 +17,7 @@ fn read() {
     |> yielder.filter(fn(l) { l != "" })
     |> yielder.to_list
 
-  st |> list.map(fn(l) { string.split(l, " ")})
+  st |> list.map(fn(l) { string.split(l, " ") })
 }
 
 pub fn solve(st_list) {
@@ -33,8 +33,7 @@ fn check(i, name, sti_list) {
   list.all(sti_list, fn(stj) {
     let assert #([s, t], j) = stj
     j == i || name != s && name != t
-    }
-  )
+  })
 }
 
 fn print(result) {
